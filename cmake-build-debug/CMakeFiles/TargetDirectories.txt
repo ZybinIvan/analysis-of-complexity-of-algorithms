@@ -1,0 +1,3 @@
+C:/Projects/CLion/5c/cmake-build-debug/CMakeFiles/5c.dir
+C:/Projects/CLion/5c/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Projects/CLion/5c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
