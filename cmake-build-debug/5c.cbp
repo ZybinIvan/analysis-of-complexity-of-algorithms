@@ -74,6 +74,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Projects/CLion/5c/libs/algorithms/algorithms.c">
+			<Option target="5c"/>
+		</Unit>
+		<Unit filename="C:/Projects/CLion/5c/libs/algorithms/algorithms.h">
+			<Option target="5c"/>
+		</Unit>
+		<Unit filename="C:/Projects/CLion/5c/libs/sorts/sorts.c">
+			<Option target="5c"/>
+		</Unit>
+		<Unit filename="C:/Projects/CLion/5c/libs/sorts/sorts.h">
+			<Option target="5c"/>
+		</Unit>
+		<Unit filename="C:/Projects/CLion/5c/libs/testing/testingFuctions.h">
+			<Option target="5c"/>
+		</Unit>
+		<Unit filename="C:/Projects/CLion/5c/libs/testing/testingFunctions.c">
+			<Option target="5c"/>
+		</Unit>
 		<Unit filename="C:/Projects/CLion/5c/main.c">
 			<Option target="5c"/>
 		</Unit>

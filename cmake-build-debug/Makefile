@@ -128,6 +128,78 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/build
 .PHONY : 5c/fast
 
+libs/algorithms/algorithms.obj: libs/algorithms/algorithms.c.obj
+.PHONY : libs/algorithms/algorithms.obj
+
+# target to build an object file
+libs/algorithms/algorithms.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/algorithms/algorithms.c.obj
+.PHONY : libs/algorithms/algorithms.c.obj
+
+libs/algorithms/algorithms.i: libs/algorithms/algorithms.c.i
+.PHONY : libs/algorithms/algorithms.i
+
+# target to preprocess a source file
+libs/algorithms/algorithms.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/algorithms/algorithms.c.i
+.PHONY : libs/algorithms/algorithms.c.i
+
+libs/algorithms/algorithms.s: libs/algorithms/algorithms.c.s
+.PHONY : libs/algorithms/algorithms.s
+
+# target to generate assembly for a file
+libs/algorithms/algorithms.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/algorithms/algorithms.c.s
+.PHONY : libs/algorithms/algorithms.c.s
+
+libs/sorts/sorts.obj: libs/sorts/sorts.c.obj
+.PHONY : libs/sorts/sorts.obj
+
+# target to build an object file
+libs/sorts/sorts.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/sorts/sorts.c.obj
+.PHONY : libs/sorts/sorts.c.obj
+
+libs/sorts/sorts.i: libs/sorts/sorts.c.i
+.PHONY : libs/sorts/sorts.i
+
+# target to preprocess a source file
+libs/sorts/sorts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/sorts/sorts.c.i
+.PHONY : libs/sorts/sorts.c.i
+
+libs/sorts/sorts.s: libs/sorts/sorts.c.s
+.PHONY : libs/sorts/sorts.s
+
+# target to generate assembly for a file
+libs/sorts/sorts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/sorts/sorts.c.s
+.PHONY : libs/sorts/sorts.c.s
+
+libs/testing/testingFunctions.obj: libs/testing/testingFunctions.c.obj
+.PHONY : libs/testing/testingFunctions.obj
+
+# target to build an object file
+libs/testing/testingFunctions.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/testing/testingFunctions.c.obj
+.PHONY : libs/testing/testingFunctions.c.obj
+
+libs/testing/testingFunctions.i: libs/testing/testingFunctions.c.i
+.PHONY : libs/testing/testingFunctions.i
+
+# target to preprocess a source file
+libs/testing/testingFunctions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/testing/testingFunctions.c.i
+.PHONY : libs/testing/testingFunctions.c.i
+
+libs/testing/testingFunctions.s: libs/testing/testingFunctions.c.s
+.PHONY : libs/testing/testingFunctions.s
+
+# target to generate assembly for a file
+libs/testing/testingFunctions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5c.dir\build.make CMakeFiles/5c.dir/libs/testing/testingFunctions.c.s
+.PHONY : libs/testing/testingFunctions.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -161,6 +233,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... 5c
+	@echo ... libs/algorithms/algorithms.obj
+	@echo ... libs/algorithms/algorithms.i
+	@echo ... libs/algorithms/algorithms.s
+	@echo ... libs/sorts/sorts.obj
+	@echo ... libs/sorts/sorts.i
+	@echo ... libs/sorts/sorts.s
+	@echo ... libs/testing/testingFunctions.obj
+	@echo ... libs/testing/testingFunctions.i
+	@echo ... libs/testing/testingFunctions.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
