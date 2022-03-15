@@ -20,7 +20,11 @@ long long getInsertionSortNComp(int *a, size_t size);
 
 void combSort(int *a, size_t size);
 
+long long getCombSortNComp(int *a, size_t size);
+
 void shellSort(int *a, size_t size);
+
+long long getShellSortNComp(int *a, size_t size);
 
 void radixSort(int *a, size_t size);
 
