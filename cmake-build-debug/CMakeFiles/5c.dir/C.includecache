@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Projects/CLion/5c/libs/algorithms/algorithms.h
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+time.h
+-
+
+C:/Projects/CLion/5c/libs/sorts/sorts.h
+stdio.h
+-
+stdbool.h
+-
+../algorithms/algorithms.h
+C:/Projects/CLion/5c/libs/algorithms/algorithms.h
+
+C:/Projects/CLion/5c/main.c
+stdlib.h
+-
+stdio.h
+-
+stdbool.h
+-
+time.h
+-
+libs/sorts/sorts.h
+C:/Projects/CLion/5c/libs/sorts/sorts.h
+libs/algorithms/algorithms.h
+C:/Projects/CLion/5c/libs/algorithms/algorithms.h
+
