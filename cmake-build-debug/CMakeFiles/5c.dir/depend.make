@@ -8,8 +8,6 @@ CMakeFiles/5c.dir/libs/sorts/sorts.c.obj: \
  ../libs/algorithms/algorithms.h \
  ../libs/sorts/sorts.c \
  ../libs/sorts/sorts.h
-CMakeFiles/5c.dir/libs/testing/testingFunctions.c.obj: \
- ../libs/testing/testingFunctions.c
 CMakeFiles/5c.dir/main.c.obj: \
  ../libs/algorithms/algorithms.h \
  ../libs/sorts/sorts.h \

@@ -8,12 +8,20 @@
 
 void bubbleSort(int *a, size_t size);
 
+long long getBubbleSortNComp(int *a, size_t size);
+
 void selectionSort(int *a, size_t size);
 
+long long getSelectionSortNComp(int *a, size_t size);
+
 void insertionSort(int *a, size_t size);
+
+long long getInsertionSortNComp(int *a, size_t size);
 
 void combSort(int *a, size_t size);
 
 void shellSort(int *a, size_t size);
+
+void radixSort(int *a, size_t size);
 
 #endif

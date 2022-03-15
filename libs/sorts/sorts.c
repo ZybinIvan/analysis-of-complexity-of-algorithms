@@ -7,14 +7,39 @@ void bubbleSort(int *a, size_t size) {
                 swap(&a[j - 1], &a[j]);
 }
 
+long long getBubbleSortNComp(int *a, size_t size) {
+    long long nComps = 0;
+    for (size_t i = 0; ++nComps && i < size - 1; i++)
+        for (size_t j = size - 1; ++nComps && j > i; j--)
+            if (++nComps && a[j - 1] > a[j])
+                swap(&a[j - 1], &a[j]);
+
+    return nComps;
+}
+
 void selectionSort(int *a, size_t size) {
     for (size_t i = 0; i < size - 1; ++i) {
         size_t indexOfMin = i;
         for (size_t j = i; j < size; ++j)
             if (a[j] < a[indexOfMin])
                 indexOfMin = j;
-        swap(&a[i], &a[indexOfMin]);
+        if (i != indexOfMin)
+            swap(&a[i], &a[indexOfMin]);
     }
+}
+
+long long getSelectionSortNComp(int *a, size_t size) {
+    long long nComps = 0;
+    for (size_t i = 0; ++nComps && i < size - 1; ++i) {
+        size_t indexOfMin = i;
+        for (size_t j = i; ++nComps && j < size; ++j)
+            if (++nComps && a[j] < a[indexOfMin])
+                indexOfMin = j;
+        if (++nComps && i != indexOfMin)
+            swap(&a[i], &a[indexOfMin]);
+    }
+
+    return nComps;
 }
 
 void insertionSort(int *a, size_t size) {
@@ -28,6 +53,20 @@ void insertionSort(int *a, size_t size) {
         a[j] = t;
     }
 }
+
+long long getInsertionSortNComp(int *a, size_t size) {
+    long long nComps = 0;
+    for (int i = 1; i < size; ++i) {
+        int t = a[i];
+        int j = i;
+        while (j > 0 && a[j - 1] > t) {
+            a[j] = a[j - 1];
+            j--;
+        }
+        a[j] = t;
+    }
+}
+
 
 void combSort(int *a, size_t size) {
     size_t step = size;
@@ -50,4 +89,8 @@ void shellSort(int *a, size_t size) {
         for (int i = s; i < size; i++)
             for (int j = i - s; j >= 0 && a[j] > a[j + s]; j -= s)
                 swap(&a[j], &a[j + s]);
+}
+
+void radixSort(int *a, size_t size) {
+
 }

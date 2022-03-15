@@ -33,7 +33,7 @@ void checkTime(void (*sortFunc)(int *, size_t),
                size_t size, char *experimentName) {
     static size_t runCounter = 1;
     // генерация последовательности
-    static int innerBuffer[100000];
+    static int innerBuffer[10000000];
     generateFunc(innerBuffer, size);
     printf("Run #%zu| ", runCounter++);
     printf("Name : %s\n", experimentName);
@@ -69,7 +69,7 @@ void timeExperiment() {
 //            {selectionSort, "selectionSort"},
 //            {insertionSort, "insertionSort"},
 //            {combSort, "combSort"},
-//            {shellSort, "shellSort"}
+            {shellSort, "shellSort"}
     };
     const unsigned FUNCS_N = ARRAY_SIZE(sorts);
     // описание функций генерации
@@ -83,7 +83,7 @@ void timeExperiment() {
     };
     const unsigned CASES_N = ARRAY_SIZE(generatingFuncs);
     // запись статистики в файл
-    for (size_t size = 10000; size <= 100000; size += 10000) {
+    for (size_t size = 1000000; size <= 10000000; size += 1000000) {
         printf("------------------------------\n");
         printf(" Size : %lld\n", size);
         for (int i = 0; i < FUNCS_N; i++) {
