@@ -71,11 +71,13 @@ void checkTime(void (*sortFunc)(int *, size_t),
 void timeExperiment() {
     // описание функций сортировки
     SortFunc sorts[] = {
-//            {bubbleSort, "bubbleSort"},
-//            {selectionSort, "selectionSort"},
-//            {insertionSort, "insertionSort"},
-//            {combSort, "combSort"},
-//            {shellSort, "shellSort"}
+//            {bubbleSort, "bubble sort"},
+//            {selectionSort, "selection sort"},
+//            {insertionSort, "insertion sort"},
+//            {combSort, "comb sort"},
+//            {shellSort, "shell sort"},
+            {radixSort, "digit sort"},
+
     };
     const unsigned FUNCS_N = ARRAY_SIZE(sorts);
     // описание функций генерации
@@ -144,7 +146,7 @@ void comparisonsExperiment() {
 //            {getSelectionSortNComp, "selectionSort"},
 //            {getInsertionSortNComp, "insertionSort"},
 //            {getCombSortNComp,      "combSort"},
-            {getShellSortNComp, "shellSort"},
+//            {getShellSortNComp, "shellSort"},
     };
     const unsigned FUNCS_N = ARRAY_SIZE(sorts);
 
@@ -176,7 +178,7 @@ void comparisonsExperiment() {
 }
 
 int main() {
-    comparisonsExperiment();
+    timeExperiment();
 
     return 0;
 }

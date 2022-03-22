@@ -21,6 +21,10 @@ stdio.h
 -
 stdbool.h
 -
+malloc.h
+-
+memory.h
+-
 ../algorithms/algorithms.h
 C:/Projects/CLion/5c/libs/algorithms/algorithms.h
 

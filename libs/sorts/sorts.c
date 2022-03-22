@@ -122,7 +122,43 @@ long long getShellSortNComp(int *a, size_t size) {
     return nComps;
 }
 
-
 void radixSort(int *a, size_t size) {
+    const int BIT_STEP = 8;
+    const int MASK_BYTE_MAX = 0b11111111;
+    const int INT_SIZE = sizeof(int);
+    const int SHIFT_TO_SIGN_BIT = 31;
 
+    int *sortingArray = (int *) malloc(size * INT_SIZE);
+    int countPositive = 0;
+    int countNegative = 0;
+
+    for (int i = 0; i < size; ++i)
+        countNegative += -(a[i] >> SHIFT_TO_SIGN_BIT);
+
+    countPositive = size - countNegative;
+
+    for (int step = 0; step < INT_SIZE; ++step) {
+        int valuesCount[UCHAR_MAX + 1] = {0};
+        int prefixSums[UCHAR_MAX + 1] = {0};
+
+        for (int i = 0; i < size; ++i) {
+            int sortingByte = a[i] >> (step * BIT_STEP) & MASK_BYTE_MAX;
+            valuesCount[sortingByte]++;
+        }
+
+        for (int i = 1; i < UCHAR_MAX + 1; ++i)
+            prefixSums[i] = prefixSums[i - 1] + valuesCount[i - 1];
+
+        for (int i = 0; i < size; ++i) {
+            int sortingByte = a[i] >> (step * BIT_STEP) & MASK_BYTE_MAX;
+            sortingArray[prefixSums[sortingByte]++] = a[i];
+        }
+
+        memcpy(a, sortingArray, INT_SIZE * size);
+    }
+
+    memcpy(a, sortingArray + countPositive, INT_SIZE * countNegative);
+    memcpy(a + countNegative, sortingArray, INT_SIZE * countPositive);
+
+    free(sortingArray);
 }
