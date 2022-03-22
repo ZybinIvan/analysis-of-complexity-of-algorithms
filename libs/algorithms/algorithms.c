@@ -26,8 +26,18 @@ void outputArray(const int *a, size_t size) {
 
 void generateRandomArray(int *a, size_t size) {
     srand(time(NULL));
-    for(size_t i = 0; i < size; i++)
+    for (size_t i = 0; i < size; i++)
         a[i] = rand();
+}
+
+void generateRandomArrayWithNegative(int *a, size_t size) {
+    srand(time(NULL));
+    for (size_t i = 0; i < size; i++) {
+        if (i % 2)
+            a[i] = rand();
+        else
+            a[i] = rand() % 100 - rand();
+    }
 }
 
 void generateOrderedArray(int *a, size_t size) {

@@ -154,7 +154,8 @@ void radixSort(int *a, size_t size) {
             sortingArray[prefixSums[sortingByte]++] = a[i];
         }
 
-        memcpy(a, sortingArray, INT_SIZE * size);
+        if (step != INT_SIZE - 1)
+            memcpy(a, sortingArray, INT_SIZE * size);
     }
 
     memcpy(a, sortingArray + countPositive, INT_SIZE * countNegative);

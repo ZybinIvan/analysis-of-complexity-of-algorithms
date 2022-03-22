@@ -16,6 +16,10 @@ stdlib.h
 time.h
 -
 
+C:/Projects/CLion/5c/libs/sorts/sorts.c
+sorts.h
+C:/Projects/CLion/5c/libs/sorts/sorts.h
+
 C:/Projects/CLion/5c/libs/sorts/sorts.h
 stdio.h
 -
@@ -26,19 +30,5 @@ malloc.h
 memory.h
 -
 ../algorithms/algorithms.h
-C:/Projects/CLion/5c/libs/algorithms/algorithms.h
-
-C:/Projects/CLion/5c/main.c
-stdlib.h
--
-stdio.h
--
-stdbool.h
--
-time.h
--
-libs/sorts/sorts.h
-C:/Projects/CLion/5c/libs/sorts/sorts.h
-libs/algorithms/algorithms.h
 C:/Projects/CLion/5c/libs/algorithms/algorithms.h
 

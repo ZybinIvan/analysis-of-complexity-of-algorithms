@@ -16,8 +16,11 @@ void outputArray(const int *a, size_t size);
 
 void generateRandomArray(int *a, size_t size);
 
+void generateRandomArrayWithNegative(int *a, size_t size);
+
 void generateOrderedArray(int *a, size_t size);
 
 void generateOrderedBackwards(int *a, size_t size);
+
 
 #endif //INC_5C_ALGORITHMS_H

@@ -83,11 +83,12 @@ void timeExperiment() {
     // описание функций генерации
     GeneratingFunc generatingFuncs[] = {
             // генерируется случайный массив
-            {generateRandomArray,      "random"},
+            {generateRandomArray,             "random"},
             // генерируется массив 0, 1, 2, ..., n - 1
-            {generateOrderedArray,     "ordered"},
+            {generateOrderedArray,            "ordered"},
             // генерируется массив n - 1, n - 2, ..., 0
-            {generateOrderedBackwards, "orderedBackwards"}
+            {generateOrderedBackwards,        "orderedBackwards"},
+            {generateRandomArrayWithNegative, "random with negative"}
     };
     const unsigned CASES_N = ARRAY_SIZE(generatingFuncs);
     // запись статистики в файл
