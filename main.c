@@ -39,7 +39,7 @@ void checkTime(void (*sortFunc)(int *, size_t),
                size_t size, char *experimentName) {
     static size_t runCounter = 1;
     // генерация последовательности
-    static int innerBuffer[10000000];
+    static int innerBuffer[30000000];
     generateFunc(innerBuffer, size);
     printf("Run #%zu| ", runCounter++);
     printf("Name : %s\n", experimentName);
@@ -76,7 +76,7 @@ void timeExperiment() {
 //            {insertionSort, "insertion sort"},
 //            {combSort, "comb sort"},
 //            {shellSort, "shell sort"},
-            {radixSort, "digit sort"},
+//            {radixSort, "digit sort"},
 
     };
     const unsigned FUNCS_N = ARRAY_SIZE(sorts);
@@ -85,14 +85,14 @@ void timeExperiment() {
             // генерируется случайный массив
             {generateRandomArray,             "random"},
             // генерируется массив 0, 1, 2, ..., n - 1
-            {generateOrderedArray,            "ordered"},
+//            {generateOrderedArray,            "ordered"},
             // генерируется массив n - 1, n - 2, ..., 0
             {generateOrderedBackwards,        "orderedBackwards"},
-            {generateRandomArrayWithNegative, "random with negative"}
+//            {generateRandomArrayWithNegative, "random with negative"}
     };
     const unsigned CASES_N = ARRAY_SIZE(generatingFuncs);
     // запись статистики в файл
-    for (size_t size = 1000000; size <= 10000000; size += 1000000) {
+    for (size_t size = 3000000; size <= 30000000; size += 3000000) {
         printf("------------------------------\n");
         printf(" Size : %lld\n", size);
         for (int i = 0; i < FUNCS_N; i++) {
@@ -146,8 +146,9 @@ void comparisonsExperiment() {
 //            {getBubbleSortNComp,  "bubbleSort"},
 //            {getSelectionSortNComp, "selectionSort"},
 //            {getInsertionSortNComp, "insertionSort"},
-//            {getCombSortNComp,      "combSort"},
-//            {getShellSortNComp, "shellSort"},
+            {getCombSortNComp,  "combSort"},
+            {getShellSortNComp, "shellSort"},
+            {getRadixSortNComp, "digitSort"}
     };
     const unsigned FUNCS_N = ARRAY_SIZE(sorts);
 
@@ -179,7 +180,8 @@ void comparisonsExperiment() {
 }
 
 int main() {
-    timeExperiment();
+//    timeExperiment();
+    comparisonsExperiment();
 
     return 0;
 }

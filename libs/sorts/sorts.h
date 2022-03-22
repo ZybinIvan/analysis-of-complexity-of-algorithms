@@ -28,8 +28,8 @@ void shellSort(int *a, size_t size);
 
 long long getShellSortNComp(int *a, size_t size);
 
-void writePrefixSums(int *a, size_t size);
-
 void radixSort(int *a, size_t size);
+
+long long getRadixSortNComp(int *a, size_t size);
 
 #endif
